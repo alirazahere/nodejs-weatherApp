@@ -12,6 +12,8 @@ const publicDirectory = path.join(__dirname, '../public')
 const viewsDirectory = path.join(__dirname, '../templates/views')
 const partialsDirectory = path.join(__dirname, '../templates/partials')
 
+const port = process.env.PORT || 3000 
+
 
 // Setup handlers and views
 app.set('view engine', 'hbs')
@@ -93,6 +95,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('server is up');
+app.listen(port, () => {
+    console.log('server is up and running on port '+port);
 })

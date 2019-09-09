@@ -4,7 +4,7 @@ $(document).ready(() => {
         $('#message-1').text('Loading...');
         $('#message-2').text('');
         let address = $('#input').val();
-        fetch('http://localhost:3000/weather?address='+address).then((response) => {
+        fetch('/weather?address='+address).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     $('#message-1').text(data.error);
